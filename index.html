@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="日常好物：虛構電商教學網站，無真實交易。"
+    />
+    <title>日常好物 DAILY GOOD｜電商教學 Demo</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script defer src="./assets/js/products.js"></script>
+    <script defer src="./assets/js/app.js"></script>
+    <script defer src="./assets/js/member.js"></script>
+  </head>
+  <body>
+    <div class="announcement">
+      把平凡日子，過得剛剛好。 <span>教學展示網站・無真實交易</span>
+    </div>
+    <header>
+      <a class="brand" href="./index.html">日常好物<small>DAILY GOOD</small></a>
+      <form id="search-form" role="search">
+        <label class="sr-only" for="search">搜尋商品名稱、分類或特色</label
+        ><input
+          id="search"
+          type="search"
+          placeholder="找找今天需要的好物…"
+        /><button aria-label="搜尋商品">搜尋</button>
+      </form>
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="./index.html" aria-current="page">商品選購</a
+        ><a href="./stores.html">分店資訊</a
+        ><a href="./login.html" id="member-link">會員登入</a>
+      </nav>
+      <button id="cart-open" class="cart-button">
+        購物袋 <span id="cart-count">0</span>
+      </button>
+    </header>
+    <main>
+      <section class="hero" aria-label="促銷活動">
+        <div class="hero-copy">
+          <p class="eyebrow" id="banner-label"></p>
+          <h1 id="banner-title"></h1>
+          <p id="banner-text"></p>
+          <a class="primary" href="#shop">逛逛日常好物 ↗</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="./assets/images/product-4.png" alt="" /><img
+            src="./assets/images/product-9.png"
+            alt=""
+          /><img src="./assets/images/product-8.png" alt="" /><b
+            >GOOD THINGS<br />FOR EVERY DAY.</b
+          >
+        </div>
+        <div class="carousel-controls">
+          <button id="prev" aria-label="上一則促銷">←</button>
+          <div id="dots"></div>
+          <button id="next" aria-label="下一則促銷">→</button
+          ><button id="pause">暫停輪播</button>
+        </div>
+      </section>
+      <section class="benefits" aria-label="品牌特色">
+        <span>✦ 精選生活提案</span><span>✦ 好物輕鬆找到</span
+        ><span>✦ 讓日常多一點喜歡</span>
+      </section>
+      <section id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CURATED FOR YOU</p>
+            <h2>今天，也好好生活。</h2>
+          </div>
+          <span>日用・飲食・生活選物</span>
+        </div>
+        <div class="toolbar">
+          <nav id="categories" aria-label="商品分類"></nav>
+          <label
+            >排序
+            <select id="sort">
+              <option value="featured">精選推薦</option>
+              <option value="low">價格由低到高</option>
+              <option value="high">價格由高到低</option>
+            </select></label
+          >
+        </div>
+        <p id="result-count" role="status"></p>
+        <div id="products" class="grid"></div>
+        <div id="empty" hidden>
+          <h3>暫時找不到符合的商品</h3>
+          <p>試試其他關鍵字或分類。</p>
+          <button id="reset">清除搜尋與篩選</button>
+        </div>
+      </section>
+      <section class="story">
+        <p class="eyebrow">A LITTLE BETTER, EVERY DAY</p>
+        <h2>喜歡的生活，從小地方開始。</h2>
+        <p>
+          一杯溫暖的飲品、一條柔軟的方巾。<br />在日常裡，找到屬於自己的剛剛好。
+        </p>
+      </section>
+    </main>
+    <footer>
+      <strong>日常好物 DAILY GOOD</strong>
+      <p>
+        本網站為虛構教學 Demo。商品圖片由 AI
+        生成，商品、價格及促銷皆為示意，不提供付款、配送或真實交易。
+      </p>
+      <p>不需註冊，不收集姓名、地址或信用卡資料。</p>
+    </footer>
+    <dialog id="detail" aria-labelledby="detail-title">
+      <button class="close" data-close="detail" aria-label="關閉商品詳情">
+        ×
+      </button>
+      <div id="detail-body"></div>
+    </dialog>
+    <dialog id="cart" aria-labelledby="cart-title">
+      <button class="close" data-close="cart" aria-label="關閉購物袋">×</button>
+      <h2 id="cart-title">你的示範購物袋</h2>
+      <p class="muted">僅供課堂操作，不會產生訂單或扣款。</p>
+      <div id="cart-items"></div>
+      <div class="total">商品總額 <strong id="cart-total"></strong></div>
+      <button class="primary" id="checkout">完成示範（不付款）</button
+      ><button id="clear-cart">清空購物袋</button>
+      <p id="checkout-message" role="status"></p>
+    </dialog>
+    <div id="toast" role="status"></div>
+  </body>
+</html>

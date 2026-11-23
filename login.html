@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script defer src="./assets/js/member.js"></script>
+    <title>示範會員登入｜日常好物教學 Demo</title>
+  </head>
+  <body>
+    <div class="announcement">日常好物・虛構教學網站・無真實交易</div>
+    <header>
+      <a class="brand" href="./index.html">日常好物<small>DAILY GOOD</small></a>
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="./index.html">商品選購</a><a href="./stores.html">分店資訊</a
+        ><a href="./login.html" aria-current="page" id="member-link"
+          >會員登入</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="page-intro">
+        <p class="eyebrow">MEMBER DEMO</p>
+        <h1>歡迎回到，日常好物。</h1>
+        <p>在課堂裡練習一段完整的會員體驗。</p>
+      </section>
+      <section class="login-layout">
+        <div class="member-story">
+          <span aria-hidden="true">✦</span>
+          <h2>讓每一天，<br />多一點喜歡。</h2>
+          <p>收藏生活的小靈感，從今天開始。</p>
+          <p class="demo-note">
+            這是假的會員登入頁面，沒有帳號資料庫、身分驗證或會員權限。
+          </p>
+        </div>
+        <div class="login-panel">
+          <div id="login-form-area">
+            <h2>示範會員登入</h2>
+            <p class="muted">請使用下方示範資料，不要輸入真實帳密。</p>
+            <form id="login-form" class="member-form" autocomplete="off">
+              <label for="demo-account">示範帳號</label
+              ><input
+                id="demo-account"
+                name="demo-account"
+                type="text"
+                required
+                placeholder="student"
+                autocapitalize="none"
+                spellcheck="false"
+                autocomplete="off"
+              /><label for="demo-password">示範密碼</label
+              ><input
+                id="demo-password"
+                name="demo-password"
+                type="password"
+                required
+                placeholder="demo1234"
+                autocomplete="off"
+              /><button class="primary" type="submit">登入教學模式</button>
+            </form>
+            <button id="fill-demo" class="fill-demo" type="button">
+              填入示範帳密
+            </button>
+            <p class="credential-note">帳號：student ／ 密碼：demo1234</p>
+            <p class="muted">
+              資料僅在目前頁面比對，不傳送或儲存帳密。登入狀態在此分頁的工作階段內保留。
+            </p>
+            <p id="login-message" role="status"></p>
+          </div>
+          <div id="member-welcome" hidden>
+            <p class="eyebrow">YOU ARE IN · DEMO ONLY</p>
+            <h2>你好，示範會員！</h2>
+            <p>
+              登入體驗完成。這個狀態僅供教學，不代表任何真實帳戶或存取權限。
+            </p>
+            <a class="primary" href="./index.html">繼續逛好物</a
+            ><button id="logout" type="button">登出示範</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <strong>日常好物 DAILY GOOD</strong>
+      <p>
+        所有商品、會員功能與分店皆為虛構教學示範，不提供真實交易或會員服務。
+      </p>
+      <a href="./index.html">回到商品首頁</a>
+    </footer>
+  </body>
+</html>
